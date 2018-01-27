@@ -7,6 +7,8 @@
     <artifactId>phoneMall-web</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+    <name>phoneMallWeb</name>
+    <description>web</description>
     <parent>
         <groupId>edu.zisu.phoneMall</groupId>
         <artifactId>phoneMall</artifactId>
