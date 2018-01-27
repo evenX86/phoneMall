@@ -18,4 +18,12 @@ public class IndexController {
         model.addAttribute("user", "1");
         return "test";
     }
+    @RequestMapping(value = "/login", method = {RequestMethod.POST, RequestMethod.GET})
+    public String login(HttpServletRequest request, Model model) {
+        return "login";
+    }
+    @RequestMapping(value = "/register", method = {RequestMethod.POST, RequestMethod.GET})
+    public String register(HttpServletRequest request, Model model) {
+        return "html/register";
+    }
 }
