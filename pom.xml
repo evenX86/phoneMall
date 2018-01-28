@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>phoneMall-dao</module>
+        <module>phoneMall-domain</module>
         <module>phoneMall-common</module>
         <module>phoneMall-service</module>
         <module>phoneMall-web</module>
