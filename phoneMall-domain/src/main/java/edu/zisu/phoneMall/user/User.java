@@ -3,7 +3,7 @@ package edu.zisu.phoneMall.user;
 public class User {
     private Long userId;
     private String userName;
-    private int userType;
+    private String userType;
     private String userPassWd;
 
     public Long getUserId() {
@@ -22,11 +22,11 @@ public class User {
         this.userName = userName;
     }
 
-    public int getUserType() {
+    public String getUserType() {
         return userType;
     }
 
-    public void setUserType(int userType) {
+    public void setUserType(String userType) {
         this.userType = userType;
     }
 

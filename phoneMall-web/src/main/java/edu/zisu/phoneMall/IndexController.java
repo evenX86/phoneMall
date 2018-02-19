@@ -50,6 +50,7 @@ public class IndexController {
         if (authUser == null) return "login";
         model.addAttribute("userName",authUser.getUserName());
         model.addAttribute("userType",authUser.getUserType());
+        log.error("登录成功: " + userName);
         //TODO 处理登录信息
         return "test";
     }

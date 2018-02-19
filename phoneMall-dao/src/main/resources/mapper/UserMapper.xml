@@ -5,12 +5,12 @@
         <id column="id" property="userId" jdbcType="INTEGER"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
         <result column="user_passwd" property="userPassWd" jdbcType="VARCHAR"/>
-        <result column="user_type" property="userType" jdbcType="INTEGER"/>
+        <result column="user_type" property="userType" jdbcType="VARCHAR"/>
     </resultMap>
     <insert id="insert" parameterType="edu.zisu.phoneMall.user.User">
     insert into pm_user (user_name, user_paswd,user_type,status, create_date
       )
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassWd,jdbcType=VARCHAR},1,sysdate()
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassWd,jdbcType=VARCHAR},"common",sysdate()
       )
     </insert>
 
