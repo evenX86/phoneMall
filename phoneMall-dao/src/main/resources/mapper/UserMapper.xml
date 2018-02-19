@@ -4,13 +4,14 @@
     <resultMap id="BaseResultMap" type="edu.zisu.phoneMall.user.User">
         <id column="id" property="userId" jdbcType="INTEGER"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_mail" property="userMail" jdbcType="VARCHAR"/>
         <result column="user_passwd" property="userPassWd" jdbcType="VARCHAR"/>
         <result column="user_type" property="userType" jdbcType="VARCHAR"/>
     </resultMap>
     <insert id="insert" parameterType="edu.zisu.phoneMall.user.User">
-    insert into pm_user (user_name, user_paswd,user_type,status, create_date
+    insert into pm_user (user_name,user_mail, user_passwd,status, create_date
       )
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassWd,jdbcType=VARCHAR},"common",sysdate()
+    values (#{userName,jdbcType=VARCHAR},#{userMail,jdbcType=VARCHAR}, #{userPassWd,jdbcType=VARCHAR},1,sysdate()
       )
     </insert>
 

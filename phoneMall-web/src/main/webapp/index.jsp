@@ -13,7 +13,6 @@
 
     <%@ include file="parts/header.jsp" %>
 </head>
-</head>
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -38,6 +37,7 @@
                     <input name="password" type="password" placeholder="Password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">登录</button>
+                <a  href="/register" type="button" class="btn btn-success">注册</a>
             </form>
                 </c:when>
                 <c:otherwise>

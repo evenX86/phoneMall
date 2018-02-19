@@ -3,6 +3,8 @@ package edu.zisu.phoneMall.chilent.impl;
 import edu.zisu.phoneMall.chilent.UserService;
 import edu.zisu.phoneMall.client.UserMapper;
 import edu.zisu.phoneMall.user.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl implements UserService {
+    private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserMapper userMapper;
@@ -22,6 +25,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean insertUser(User user) {
-        return null;
+        int i = userMapper.insert(user);
+        log.error("插入数据库返回值: " + i);
+        return true;
     }
 }

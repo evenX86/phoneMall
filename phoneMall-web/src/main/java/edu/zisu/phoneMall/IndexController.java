@@ -46,7 +46,7 @@ public class IndexController {
     }
     @RequestMapping(value = "/register", method = {RequestMethod.POST, RequestMethod.GET})
     public String register(HttpServletRequest request, Model model) {
-        return "html/register";
+        return "register";
     }
 
     @RequestMapping(value = "/doLogin", method = {RequestMethod.POST})
@@ -67,8 +67,19 @@ public class IndexController {
         return "../index";
     }
     @RequestMapping(value = "/doRegister", method = {RequestMethod.POST, RequestMethod.GET})
-    public String doRegister(HttpServletRequest request, Model model) {
-        //TODO 处理注册信息
-        return "login";
+    public String doRegister(HttpServletRequest request, Model model,HttpSession httpSession) {
+        log.error("用户注册");
+        String userName = request.getParameter("username");
+        String passwd = request.getParameter("password");
+        String userMail = request.getParameter("userMail");
+        log.error("登录信息: " + userName + " 密码: " + passwd + " 邮箱 : " + userMail);
+        if (StringUtils.isBlank(userName) || StringUtils.isBlank(passwd) || StringUtils.isBlank(userMail)) return "register";
+        User user = new User(userName,userMail,passwd);
+        Boolean flag = userService.insertUser(user);
+        if (!flag) {
+            log.error("注册失败");
+        }
+        httpSession.setAttribute("user",user);
+        return "../index";
     }
 }
