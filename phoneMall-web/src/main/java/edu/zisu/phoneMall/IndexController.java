@@ -64,7 +64,6 @@ public class IndexController {
         httpSession.setAttribute("user",authUser);
         model.addAttribute(user);
         log.error("登录成功: " + userName);
-        //TODO 处理登录信息
         return "../index";
     }
     @RequestMapping(value = "/doRegister", method = {RequestMethod.POST, RequestMethod.GET})
