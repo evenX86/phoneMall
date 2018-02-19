@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 
-    <form class="form-signin" action="${pageContext.request.contextPath}/doLogin">
+    <form class="form-signin" action="${pageContext.request.contextPath}/doLogin" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" required autofocus>

@@ -27,7 +27,7 @@
             <a class="navbar-brand" href="#">PhoneMall 手机网上商城</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/doLogin">
+            <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/doLogin" method="post">
                 <div class="form-group">
                     <input name="username" type="text" class="form-control">
                 </div>

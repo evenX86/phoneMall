@@ -36,7 +36,7 @@ public class IndexController {
         return "html/register";
     }
 
-    @RequestMapping(value = "/doLogin", method = {RequestMethod.POST, RequestMethod.GET})
+    @RequestMapping(value = "/doLogin", method = {RequestMethod.POST})
     public String doLogin(HttpServletRequest request, Model model) {
         log.error("进入登录Action");
         String userName = request.getParameter("username");
