@@ -38,17 +38,18 @@ public class IndexController {
 
     @RequestMapping(value = "/doLogin", method = {RequestMethod.POST, RequestMethod.GET})
     public String doLogin(HttpServletRequest request, Model model) {
+        log.error("进入登录Action");
         String userName = request.getParameter("username");
-        if (StringUtils.isBlank(userName)) return "login";
         String passwd = request.getParameter("password");
+        log.error("登录信息: " + userName + " 密码: " + passwd);
         if (StringUtils.isBlank(userName) || StringUtils.isBlank(passwd)) return "login";
         User user = new User();
         user.setUserName(userName);
         user.setUserPassWd(passwd);
         User authUser = userService.getUserByNameAndPasswd(user);
+        if (authUser == null) return "login";
         model.addAttribute("userName",authUser.getUserName());
         model.addAttribute("userType",authUser.getUserType());
-        log.error("登录信息: " + userName + " 密码: " + passwd);
         //TODO 处理登录信息
         return "test";
     }

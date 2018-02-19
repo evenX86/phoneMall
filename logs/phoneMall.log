@@ -4000,3 +4000,95 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 [INFO] [2018-02-19 09:28:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:28:09 CST 2018]; parent: Root WebApplicationContext
 [INFO] [2018-02-19 09:28:09][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:28:09 CST 2018]; parent: Root WebApplicationContext
 [INFO] [2018-02-19 09:28:09][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 533 ms
+[INFO] [2018-02-19 09:32:54][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2018-02-19 09:32:54][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Mon Feb 19 09:32:54 CST 2018]; root of context hierarchy
+[INFO] [2018-02-19 09:32:54][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2018-02-19 09:32:54][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-02-19 09:32:54][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:32:55][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2018-02-19 09:32:55][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1214 ms
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2018-02-19 09:32:55][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:32:55 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:32:55][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-web.xml]
+[INFO] [2018-02-19 09:32:55][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/register],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.register(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doRegister],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doRegister(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.login(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/getUserById],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.getUserById(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doLogin],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doLogin(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:32:55 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:32:55 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:32:55][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 537 ms
+[INFO] [2018-02-19 09:37:01][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2018-02-19 09:37:01][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Mon Feb 19 09:37:01 CST 2018]; root of context hierarchy
+[INFO] [2018-02-19 09:37:01][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2018-02-19 09:37:02][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-02-19 09:37:02][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:37:02][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2018-02-19 09:37:02][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1070 ms
+[INFO] [2018-02-19 09:37:02][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2018-02-19 09:37:02][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:37:02 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:37:02][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-web.xml]
+[INFO] [2018-02-19 09:37:03][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/register],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.register(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doLogin],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doLogin(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.login(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/getUserById],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.getUserById(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doRegister],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doRegister(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:37:02 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:37:02 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:37:03][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 504 ms
+[INFO] [2018-02-19 09:38:08][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2018-02-19 09:38:08][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Mon Feb 19 09:38:08 CST 2018]; root of context hierarchy
+[INFO] [2018-02-19 09:38:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2018-02-19 09:38:09][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-02-19 09:38:09][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:38:09][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2018-02-19 09:38:10][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1348 ms
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2018-02-19 09:38:10][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:10 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:10][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-web.xml]
+[INFO] [2018-02-19 09:38:10][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/register],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.register(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/getUserById],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.getUserById(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.login(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doLogin],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doLogin(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doRegister],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doRegister(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:10 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:10 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:10][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 459 ms
+[ERROR] [2018-02-19 09:38:13][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:38:15][edu.zisu.phoneMall.IndexController]进入登录Action
+[INFO] [2018-02-19 09:38:34][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2018-02-19 09:38:34][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Mon Feb 19 09:38:34 CST 2018]; root of context hierarchy
+[INFO] [2018-02-19 09:38:34][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2018-02-19 09:38:35][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-02-19 09:38:35][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:38:35][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2018-02-19 09:38:35][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 1248 ms
+[INFO] [2018-02-19 09:38:35][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2018-02-19 09:38:35][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:35 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:35][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-web.xml]
+[INFO] [2018-02-19 09:38:35][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/register],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.register(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doRegister],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doRegister(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/getUserById],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.getUserById(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/doLogin],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.doLogin(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]Mapped "{[/login],methods=[POST || GET]}" onto public java.lang.String edu.zisu.phoneMall.IndexController.login(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:35 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]Looking for @ControllerAdvice: WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Feb 19 09:38:35 CST 2018]; parent: Root WebApplicationContext
+[INFO] [2018-02-19 09:38:36][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 540 ms
+[ERROR] [2018-02-19 09:38:36][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:38:36][edu.zisu.phoneMall.IndexController]登录信息: admin 密码: null
+[ERROR] [2018-02-19 09:38:38][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:38:38][edu.zisu.phoneMall.IndexController]登录信息: admin 密码: null
+[ERROR] [2018-02-19 09:38:44][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:38:44][edu.zisu.phoneMall.IndexController]登录信息: admin 密码: null
+[ERROR] [2018-02-19 09:39:18][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:39:18][edu.zisu.phoneMall.IndexController]登录信息: admin 密码: null
+[ERROR] [2018-02-19 09:39:19][edu.zisu.phoneMall.IndexController]进入登录Action
+[ERROR] [2018-02-19 09:39:19][edu.zisu.phoneMall.IndexController]登录信息: admin 密码: admin

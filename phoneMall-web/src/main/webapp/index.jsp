@@ -29,7 +29,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/doLogin">
                 <div class="form-group">
-                    <input name="username" type="text" placeholder="Email" class="form-control">
+                    <input name="username" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <input name="password" type="password" placeholder="Password" class="form-control">
