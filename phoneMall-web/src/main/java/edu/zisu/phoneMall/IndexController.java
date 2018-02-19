@@ -22,8 +22,6 @@ public class IndexController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String Index(HttpServletRequest request, Model model,HttpSession httpSession) {
-        log.error("首页请求: ");
-        System.out.println(request);
         User user = (User) httpSession.getAttribute("user");
         if (user == null) {
             log.error("session中无用户信息");
