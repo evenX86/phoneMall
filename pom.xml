@@ -264,6 +264,11 @@
             <artifactId>spring-session</artifactId>
             <version>1.0.2.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.44</version>
+        </dependency>
     </dependencies>
 
     <build>

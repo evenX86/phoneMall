@@ -43,7 +43,8 @@
                 <c:otherwise>
                     <form class="navbar-form navbar-right">
                         <div class="form-group">
-                            <span class="form-control"> Hello ${user.userName} </span>
+                            <a href="/userInfo"><span class="form-control"> Hello ${user.userName} </span></a>
+                            <a href="/logOut"><span class="form-control"> 退出 </span></a>
                         </div>
                     </form>
 

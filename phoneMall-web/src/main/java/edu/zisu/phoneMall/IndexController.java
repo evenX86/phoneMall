@@ -48,6 +48,11 @@ public class IndexController {
     public String register(HttpServletRequest request, Model model) {
         return "register";
     }
+    @RequestMapping(value = "/logOut", method = {RequestMethod.POST, RequestMethod.GET})
+    public String logOut(HttpServletRequest request, Model model,HttpSession session) {
+        session.removeAttribute("user");
+        return "../index";
+    }
 
     @RequestMapping(value = "/doLogin", method = {RequestMethod.POST})
     public String doLogin(HttpServletRequest request, Model model, HttpSession httpSession) {
@@ -61,6 +66,7 @@ public class IndexController {
         user.setUserPassWd(passwd);
         User authUser = userService.getUserByNameAndPasswd(user);
         if (authUser == null) return "login";
+        log.error("登陆用户信息： " + authUser.getUserType());
         httpSession.setAttribute("user",authUser);
         model.addAttribute(user);
         log.error("登录成功: " + userName);
@@ -81,5 +87,9 @@ public class IndexController {
         }
         httpSession.setAttribute("user",user);
         return "../index";
+    }
+    @RequestMapping(value = "/error", method = {RequestMethod.POST, RequestMethod.GET})
+    public String error(HttpServletRequest request, Model model,HttpSession httpSession) {
+        return "error";
     }
 }

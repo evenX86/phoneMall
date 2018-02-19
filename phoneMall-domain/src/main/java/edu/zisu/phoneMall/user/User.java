@@ -6,6 +6,8 @@ public class User {
     private String userMail;
     private String userType;
     private String userPassWd;
+    private String userTel;
+    private String userAddr;
 
     public User() {
     }
@@ -54,5 +56,21 @@ public class User {
 
     public void setUserPassWd(String userPassWd) {
         this.userPassWd = userPassWd;
+    }
+
+    public String getUserTel() {
+        return userTel;
+    }
+
+    public void setUserTel(String userTel) {
+        this.userTel = userTel;
+    }
+
+    public String getUserAddr() {
+        return userAddr;
+    }
+
+    public void setUserAddr(String userAddr) {
+        this.userAddr = userAddr;
     }
 }
