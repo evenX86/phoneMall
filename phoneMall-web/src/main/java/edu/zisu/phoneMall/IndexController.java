@@ -12,12 +12,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class IndexController {
     private static final Logger log = LoggerFactory.getLogger(IndexController.class);
     @Autowired
     private UserService userService;
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String Index(HttpServletRequest request, Model model,HttpSession httpSession) {
+        log.error("首页请求: ");
+        System.out.println(request);
+        User user = (User) httpSession.getAttribute("user");
+        if (user == null) {
+            log.error("session中无用户信息");
+            return "login";
+        }
+        //参数
+        model.addAttribute("user", user);
+        return "../index";
+    }
 
     @RequestMapping(value = "/getUserById", method = {RequestMethod.POST, RequestMethod.GET})
     public String getUserById(HttpServletRequest request, Model model) {
@@ -37,7 +52,7 @@ public class IndexController {
     }
 
     @RequestMapping(value = "/doLogin", method = {RequestMethod.POST})
-    public String doLogin(HttpServletRequest request, Model model) {
+    public String doLogin(HttpServletRequest request, Model model, HttpSession httpSession) {
         log.error("进入登录Action");
         String userName = request.getParameter("username");
         String passwd = request.getParameter("password");
@@ -48,6 +63,7 @@ public class IndexController {
         user.setUserPassWd(passwd);
         User authUser = userService.getUserByNameAndPasswd(user);
         if (authUser == null) return "login";
+        httpSession.setAttribute("user",authUser);
         model.addAttribute(user);
         log.error("登录成功: " + userName);
         //TODO 处理登录信息
@@ -56,6 +72,6 @@ public class IndexController {
     @RequestMapping(value = "/doRegister", method = {RequestMethod.POST, RequestMethod.GET})
     public String doRegister(HttpServletRequest request, Model model) {
         //TODO 处理注册信息
-        return "index";
+        return "login";
     }
 }
