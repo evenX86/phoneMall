@@ -1,21 +1,19 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 10191
-  Date: 2018/1/28
-  Time: 0:34
+  Date: 2018/2/19
+  Time: 19:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>${user.userName}</title>
+    <title>用户管理</title>
     <%@ include file="../../parts/header.jsp" %>
     <!-- Custom styles for this template -->
     <link href="../../bootstrap-3.3.7-dist/css/signin.css" rel="stylesheet">
     <link href="../../bootstrap-3.3.7-dist/css/offcanvas.css" rel="stylesheet">
 </head>
-
 <body>
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
@@ -31,12 +29,12 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">商城首页</a></li>
-                <li class="active"><a href="/userInfo">个人信息</a></li>
+                <li><a href="/userInfo">个人信息</a></li>
+                <li class="active"><a href="/adminOps">管理员操作</a></li>
             </ul>
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
-
 <div class="container">
 
     <div class="row row-offcanvas row-offcanvas-right">
@@ -85,13 +83,9 @@
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
-                <a href="#" class="list-group-item active">用户信息</a>
-                <a href="#" class="list-group-item">订单信息</a>
-                <c:choose>
-                    <c:when test="${user.userType=='admin'}"    >
-                        <a href="/adminOps" class="list-group-item">管理员操作</a>
-                    </c:when>
-                </c:choose>
+                <a href="#" class="list-group-item active">普通用户管理</a>
+                <a href="#" class="list-group-item">查看手机</a>
+                <a href="#" class="list-group-item">手机录入</a>
             </div>
         </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
@@ -104,13 +98,5 @@
 
 </div><!--/.container-->
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../bootstrap-3.3.7-dist/js/offcanvas.js"></script>
 </body>
 </html>

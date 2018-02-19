@@ -31,4 +31,19 @@ public class UserInfoController {
             return "error";
         }
     }
+    @RequestMapping(value = "/adminOps", method = {RequestMethod.POST, RequestMethod.GET})
+    public String adminOps(HttpServletRequest request, Model model,HttpSession session) {
+        try {
+            User user = (User) session.getAttribute("user");
+            if (!"admin".equals(user.getUserType())) {
+                return "error";
+            }
+            model.addAttribute(user);
+            return "html/adminOps";
+        } catch (Exception e) {
+            log.error("管理员页面访问出错",e);
+            return "error";
+        }
+    }
+
 }
