@@ -48,11 +48,10 @@ public class IndexController {
         user.setUserPassWd(passwd);
         User authUser = userService.getUserByNameAndPasswd(user);
         if (authUser == null) return "login";
-        model.addAttribute("userName",authUser.getUserName());
-        model.addAttribute("userType",authUser.getUserType());
+        model.addAttribute(user);
         log.error("登录成功: " + userName);
         //TODO 处理登录信息
-        return "test";
+        return "../index";
     }
     @RequestMapping(value = "/doRegister", method = {RequestMethod.POST, RequestMethod.GET})
     public String doRegister(HttpServletRequest request, Model model) {
