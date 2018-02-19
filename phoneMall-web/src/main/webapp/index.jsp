@@ -27,12 +27,12 @@
             <a class="navbar-brand" href="#">PhoneMall 手机网上商城</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" action="${pageContext.request.contextPath}/doLogin">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <input name="username" type="text" placeholder="Email" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
+                    <input name="password" type="password" placeholder="Password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">登录</button>
             </form>

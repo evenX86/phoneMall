@@ -1,6 +1,7 @@
 package edu.zisu.phoneMall;
 
 import edu.zisu.phoneMall.chilent.UserService;
+import edu.zisu.phoneMall.user.User;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,8 +38,19 @@ public class IndexController {
 
     @RequestMapping(value = "/doLogin", method = {RequestMethod.POST, RequestMethod.GET})
     public String doLogin(HttpServletRequest request, Model model) {
+        String userName = request.getParameter("username");
+        if (StringUtils.isBlank(userName)) return "login";
+        String passwd = request.getParameter("password");
+        if (StringUtils.isBlank(userName) || StringUtils.isBlank(passwd)) return "login";
+        User user = new User();
+        user.setUserName(userName);
+        user.setUserPassWd(passwd);
+        User authUser = userService.getUserByNameAndPasswd(user);
+        model.addAttribute("userName",authUser.getUserName());
+        model.addAttribute("userType",authUser.getUserType());
+        log.error("登录信息: " + userName + " 密码: " + passwd);
         //TODO 处理登录信息
-        return "index";
+        return "test";
     }
     @RequestMapping(value = "/doRegister", method = {RequestMethod.POST, RequestMethod.GET})
     public String doRegister(HttpServletRequest request, Model model) {

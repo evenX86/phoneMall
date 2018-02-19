@@ -11,6 +11,8 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Integer uId);
 
+    User selectByUserNameAndPassWd(User user);
+
     List<User> selectAll();
 
     int updateByPrimaryKey(User record);

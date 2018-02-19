@@ -4,6 +4,7 @@
     <resultMap id="BaseResultMap" type="edu.zisu.phoneMall.user.User">
         <id column="id" property="userId" jdbcType="INTEGER"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_passwd" property="userPassWd" jdbcType="VARCHAR"/>
         <result column="user_type" property="userType" jdbcType="INTEGER"/>
     </resultMap>
     <insert id="insert" parameterType="edu.zisu.phoneMall.user.User">
@@ -12,4 +13,16 @@
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassWd,jdbcType=VARCHAR},1,sysdate()
       )
     </insert>
+
+    <select id="selectByUserNameAndPassWd" resultType="edu.zisu.phoneMall.user.User" parameterType="edu.zisu.phoneMall.user.User">
+        SELECT * FROM pm_user
+        <where>
+            <if test="userName != null and userName != ''">
+                and user_name = #{userName}
+            </if>
+            <if test="userPassWd != null and userPassWd != ''">
+                and user_passwd = #{userPassWd}
+            </if>
+        </where>
+    </select>
 </mapper>
