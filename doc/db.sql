@@ -15,6 +15,7 @@ CREATE TABLE `pm_user` (
 
 CREATE TABLE `pm_phone_detail` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `phone_brand` varchar(20) DEFAULT NULL,
   `phone_name` varchar(50) DEFAULT NULL,
   `phone_config` varchar(255) DEFAULT NULL,
   `phone_price` int(11) DEFAULT '0' COMMENT '手机价格',
@@ -24,6 +25,9 @@ CREATE TABLE `pm_phone_detail` (
   `created` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `operator` varchar(50) DEFAULT NULL,
   `modified` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='手机信息表';
+
+
 

@@ -13,6 +13,37 @@
     <!-- Custom styles for this template -->
     <link href="../../bootstrap-3.3.7-dist/css/signin.css" rel="stylesheet">
     <link href="../../bootstrap-3.3.7-dist/css/offcanvas.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            padding-bottom: 10px;
+        }
+
+        .form-horizontal .control-group {
+            margin-bottom: 18px;
+        }
+
+        .popover-content form {
+            margin: 0 auto;
+            width: 213px;
+        }
+        .popover-content form .btn{
+            margin-right: 10px
+        }
+        .form-horizontal .control-label {
+            float: left;
+            width: 140px;
+            padding-top: 5px;
+            text-align: right;
+        }
+        .form-horizontal .controls {
+            margin-left: 160px;
+        }
+        .form-horizontal .help-block {
+            margin-top: 9px;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -38,7 +69,7 @@
 </nav><!-- /.navbar -->
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right">
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="/saveSku">
             <fieldset>
                 <div id="legend" class="">
                     <legend class="">手机SKU录入</legend>
@@ -48,15 +79,15 @@
                     <!-- Text input-->
                     <label class="control-label" for="input01">手机名</label>
                     <div class="controls">
-                        <input type="text" placeholder="小米5" class="input-xlarge">
+                        <input name="skuName" type="text" placeholder="小米5" class="input-xlarge" id="input01">
                         <p class="help-block">手机名称</p>
                     </div>
                 </div><div class="control-group">
 
                 <!-- Text input-->
-                <label class="control-label" for="input01">手机品牌</label>
+                <label class="control-label" for="input02">手机品牌</label>
                 <div class="controls">
-                    <input type="text" placeholder="小米" class="input-xlarge">
+                    <input name="skuBrand" type="text" placeholder="小米" class="input-xlarge" id="input02">
                     <p class="help-block">输入手机品牌</p>
                 </div>
             </div>
@@ -66,7 +97,7 @@
                     <!-- Select Basic -->
                     <label class="control-label">运行内存</label>
                     <div class="controls">
-                        <select class="input-xlarge">
+                        <select name="skuRam" class="input-xlarge">
                             <option>2G以下</option>
                             <option>2G</option>
                             <option>3G</option>
@@ -80,7 +111,7 @@
                 <!-- Select Basic -->
                 <label class="control-label">机身内存</label>
                 <div class="controls">
-                    <select class="input-xlarge">
+                    <select name="skuRom" class="input-xlarge">
                         <option>8G以下</option>
                         <option>8G</option>
                         <option>16G</option>
@@ -95,12 +126,13 @@
                 <!-- Select Basic -->
                 <label class="control-label">屏幕尺寸</label>
                 <div class="controls">
-                    <select class="input-xlarge">
+                    <select class="input-xlarge" name="screenSize">
                         <option>5.5-5.1英寸</option>
                         <option>5.6英寸及以上</option>
                         <option>5.0-4.6英寸</option>
                         <option>3.0英寸及以下</option>
-                        <option>4.5-3.1英寸</option></select>
+                        <option>4.5-3.1英寸</option>
+                    </select>
                 </div>
 
             </div><div class="control-group">
@@ -108,7 +140,7 @@
                 <!-- Text input-->
                 <label class="control-label" for="input01">价格</label>
                 <div class="controls">
-                    <input type="text" placeholder="1000.00" class="input-xlarge">
+                    <input name="phonePrice" type="text" placeholder="1000.00" class="input-xlarge">
                     <p class="help-block">手机价格</p>
                 </div>
             </div>
@@ -118,7 +150,7 @@
                     <!-- Text input-->
                     <label class="control-label" for="input01">库存</label>
                     <div class="controls">
-                        <input type="text" placeholder="100" class="input-xlarge">
+                        <input name="skuStock" type="text" placeholder="100" class="input-xlarge">
                         <p class="help-block">手机库存</p>
                     </div>
                 </div>
@@ -127,10 +159,11 @@
 
                     <!-- File Upload -->
                     <div class="controls">
-                        <input class="input-file" id="fileInput" type="file">
+                        <input name="skuPic" class="input-file" id="fileInput" type="file">
                     </div>
                 </div>
             </fieldset>
+            <button type="submit" class="btn btn-success">提交</button>
         </form>
     </div><!--/row-->
     <hr>

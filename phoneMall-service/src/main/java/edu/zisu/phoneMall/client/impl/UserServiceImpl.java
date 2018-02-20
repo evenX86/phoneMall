@@ -1,6 +1,6 @@
-package edu.zisu.phoneMall.chilent.impl;
+package edu.zisu.phoneMall.client.impl;
 
-import edu.zisu.phoneMall.chilent.UserService;
+import edu.zisu.phoneMall.client.UserService;
 import edu.zisu.phoneMall.client.UserMapper;
 import edu.zisu.phoneMall.user.User;
 import org.slf4j.Logger;
