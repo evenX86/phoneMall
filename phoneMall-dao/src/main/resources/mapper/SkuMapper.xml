@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="edu.zisu.phoneMall.client.SkuMapper">
     <insert id="insert" parameterType="edu.zisu.phoneMall.sku.Phone">
-        insert into pm_phone_detail (phone_name,phone_brand, phone_price,phone_stock,phone_img,status,creator,operator,modified,created
+        insert into pm_phone_detail (phone_name,phone_brand,phone_config, phone_price,phone_stock,phone_img,status,creator,operator,modified,created
         )
-        values (#{phoneName,jdbcType=VARCHAR},#{phoneBrand,jdbcType=VARCHAR}, #{phonePrice,jdbcType=VARCHAR},
+        values (#{phoneName,jdbcType=VARCHAR},#{phoneBrand,jdbcType=VARCHAR},#{phoneConfig,jdbcType=VARCHAR}, #{phonePrice,jdbcType=VARCHAR},
          #{phoneStock,jdbcType=VARCHAR},#{phonePic,jdbcType=VARCHAR},1,#{creator,jdbcType=VARCHAR},#{operator,jdbcType=VARCHAR},sysdate(),sysdate()
         )
     </insert>
