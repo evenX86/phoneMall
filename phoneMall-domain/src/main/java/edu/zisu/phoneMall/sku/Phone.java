@@ -1,6 +1,7 @@
 package edu.zisu.phoneMall.sku;
 
-import java.util.Date;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Phone {
     private String phoneName;
@@ -28,7 +29,7 @@ public class Phone {
     }
 
     public Phone(String phoneName, String phoneBrand, Integer phonePrice, Integer phoneStock, String phonePic,
-                 String phoneConfig, String creator, Date created, String operator, Date modified, Integer status) {
+                 String phoneConfig, String creator, Timestamp created, String operator, Timestamp modified, Integer status) {
         this.phoneName = phoneName;
         this.phoneBrand = phoneBrand;
         this.phonePrice = phonePrice;
@@ -36,9 +37,9 @@ public class Phone {
         this.phonePic = phonePic;
         this.phoneConfig = phoneConfig;
         this.creator = creator;
-        this.created = created;
+        this.created = Date.valueOf(created.toLocalDateTime().toLocalDate());
         this.operator = operator;
-        this.modified = modified;
+        this.modified = Date.valueOf(modified.toLocalDateTime().toLocalDate());
         this.status = status;
     }
 

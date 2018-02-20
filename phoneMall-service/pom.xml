@@ -26,5 +26,10 @@
             <artifactId>phoneMall-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>edu.zisu.phoneMall</groupId>
+            <artifactId>phoneMall-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

@@ -3,12 +3,14 @@ package edu.zisu.phoneMall.service.impl;
 import edu.zisu.phoneMall.client.SkuMapper;
 import edu.zisu.phoneMall.service.SkuService;
 import edu.zisu.phoneMall.sku.Phone;
+import edu.zisu.phoneMall.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SkuServiceImpl implements SkuService{
@@ -26,6 +28,8 @@ public class SkuServiceImpl implements SkuService{
 
     @Override
     public List<Phone> querySkuList() {
-        return skuMapper.querySkuList();
+        List<Phone> tmpResult = skuMapper.querySkuList();
+        log.error("查询结果: " + JsonUtils.toString(tmpResult));
+        return tmpResult;
     }
 }

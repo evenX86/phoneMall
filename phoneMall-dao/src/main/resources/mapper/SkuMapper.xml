@@ -8,7 +8,19 @@
          #{phoneStock,jdbcType=VARCHAR},#{phonePic,jdbcType=VARCHAR},1,#{creator,jdbcType=VARCHAR},#{operator,jdbcType=VARCHAR},sysdate(),sysdate()
         )
     </insert>
-    <select id="querySkuList" resultType="edu.zisu.phoneMall.sku.Phone">
+    <resultMap id="phoneResultMap" type="edu.zisu.phoneMall.sku.Phone">
+        <id column="phone_name" property="phoneName" jdbcType="VARCHAR" />
+        <id column="phone_brand" property="phoneBrand" jdbcType="VARCHAR"/>
+        <id column="phone_price" property="phonePrice" jdbcType="INTEGER"/>
+        <id column="phone_stock" property="phoneStock" jdbcType="INTEGER"/>
+        <id column="phone_img" property="phonePic" jdbcType="VARCHAR"/>
+        <id column="phone_config" property="phoneConfig" jdbcType="VARCHAR"/>
+        <id column="creator" property="creator" jdbcType="VARCHAR"/>
+        <id column="created" property="created" jdbcType="TIMESTAMP"/>
+        <id column="operator" property="operator" jdbcType="VARCHAR"/>
+        <id column="status" property="status" jdbcType="TINYINT"/>
+    </resultMap>
+    <select id="querySkuList" resultMap="phoneResultMap">
         SELECT `phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
         `operator`,`modified`,`status` FROM pm_phone_detail
     </select>
