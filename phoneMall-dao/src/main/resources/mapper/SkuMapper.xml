@@ -8,16 +8,8 @@
          #{phoneStock,jdbcType=VARCHAR},#{phonePic,jdbcType=VARCHAR},1,#{creator,jdbcType=VARCHAR},#{operator,jdbcType=VARCHAR},sysdate(),sysdate()
         )
     </insert>
-
-    <select id="selectByUserNameAndPassWd" resultType="edu.zisu.phoneMall.user.User" parameterType="edu.zisu.phoneMall.user.User">
-        SELECT * FROM pm_user
-        <where>
-            <if test="userName != null and userName != ''">
-                and user_name = #{userName}
-            </if>
-            <if test="userPassWd != null and userPassWd != ''">
-                and user_passwd = #{userPassWd}
-            </if>
-        </where>
+    <select id="querySkuList" resultType="edu.zisu.phoneMall.sku.Phone">
+        SELECT `phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
+        `operator`,`modified`,`status` FROM pm_phone_detail
     </select>
 </mapper>

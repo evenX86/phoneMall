@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SkuServiceImpl implements SkuService{
     private static final Logger log = LoggerFactory.getLogger(SkuServiceImpl.class);
@@ -20,5 +22,10 @@ public class SkuServiceImpl implements SkuService{
         int i = skuMapper.insert(phone);
         log.error("插入数据库返回值: " + i);
         return true;
+    }
+
+    @Override
+    public List<Phone> querySkuList() {
+        return skuMapper.querySkuList();
     }
 }

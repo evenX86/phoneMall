@@ -84,7 +84,7 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
                 <a href="#" class="list-group-item active">普通用户管理</a>
-                <a href="#" class="list-group-item">查看手机</a>
+                <a href="/skuList" class="list-group-item">查看手机</a>
                 <a href="/addSku" class="list-group-item">手机录入</a>
             </div>
         </div><!--/.sidebar-offcanvas-->

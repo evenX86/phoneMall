@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -63,6 +64,7 @@ public class SkuController {
             return "error";
         }
     }
+
     @RequestMapping(value = "/saveSku", method = {RequestMethod.POST, RequestMethod.GET})
     public String saveSku(HttpServletRequest request, Model model, HttpSession session) {
         try {
@@ -78,7 +80,8 @@ public class SkuController {
             String phonePrice = request.getParameter("phonePrice");
             String skuStock = request.getParameter("skuStock");
             String skuPic = request.getParameter("skuPic");
-            Phone phone = prepareSku(skuName,skuBrand,skuRam,skuRom,screenSize,phonePrice,skuStock,skuPic,user.getUserName());
+            Phone phone = prepareSku(skuName,skuBrand,skuRam,skuRom,screenSize,Integer.parseInt(phonePrice),
+                    Integer.parseInt(skuStock),skuPic,user.getUserName());
             log.error("录入手机信息: " + JsonUtils.toString(phone));
             skuService.insertSku(phone);
             return "sku/addSku";
@@ -88,7 +91,26 @@ public class SkuController {
         }
     }
 
-    private Phone prepareSku(String skuName, String skuBrand, String skuRam, String skuRom, String screenSize, String phonePrice, String skuStock, String skuPic,String userName) {
+
+    @RequestMapping(value = "/skuList", method = {RequestMethod.POST, RequestMethod.GET})
+    public String skuList(HttpServletRequest request, Model model, HttpSession session) {
+        try {
+            User user = (User) session.getAttribute("user");
+            if (user == null) {
+                return "error";
+            }
+            List<Phone> phoneList = skuService.querySkuList();
+            model.addAttribute(phoneList);
+            return "sku/skuList";
+        } catch (Exception e) {
+            log.error("访问手机列表出错",e);
+            return "error";
+        }
+    }
+
+
+    private Phone prepareSku(String skuName, String skuBrand, String skuRam, String skuRom, String screenSize,
+                             Integer phonePrice, Integer skuStock, String skuPic,String userName) {
         Map<String,String> configParams = new HashMap<>();
         configParams.put("ram",skuRam);
         configParams.put("rom",skuRom);
