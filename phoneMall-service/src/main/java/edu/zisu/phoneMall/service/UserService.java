@@ -1,4 +1,4 @@
-package edu.zisu.phoneMall.client;
+package edu.zisu.phoneMall.service;
 
 import edu.zisu.phoneMall.user.User;
 

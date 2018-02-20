@@ -1,6 +1,6 @@
 package edu.zisu.phoneMall;
 
-import edu.zisu.phoneMall.client.UserService;
+import edu.zisu.phoneMall.service.UserService;
 import edu.zisu.phoneMall.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

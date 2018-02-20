@@ -1,6 +1,6 @@
 package edu.zisu.phoneMall;
 
-import edu.zisu.phoneMall.client.SkuService;
+import edu.zisu.phoneMall.service.SkuService;
 import edu.zisu.phoneMall.sku.Phone;
 import edu.zisu.phoneMall.user.User;
 import edu.zisu.phoneMall.utils.JsonUtils;

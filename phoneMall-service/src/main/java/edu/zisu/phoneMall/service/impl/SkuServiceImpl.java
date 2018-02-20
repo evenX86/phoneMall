@@ -1,7 +1,7 @@
-package edu.zisu.phoneMall.client.impl;
+package edu.zisu.phoneMall.service.impl;
 
 import edu.zisu.phoneMall.client.SkuMapper;
-import edu.zisu.phoneMall.client.SkuService;
+import edu.zisu.phoneMall.service.SkuService;
 import edu.zisu.phoneMall.sku.Phone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
