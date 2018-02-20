@@ -70,14 +70,14 @@ public class SkuController {
             if (user == null) {
                 return "error";
             }
-            String skuName = (String) request.getAttribute("skuName");
-            String skuBrand = (String) request.getAttribute("skuBrand");
-            String skuRam = (String) request.getAttribute("skuRam");
-            String skuRom = (String) request.getAttribute("skuRom");
-            String screenSize = (String) request.getAttribute("screenSize");
-            String phonePrice = (String) request.getAttribute("phonePrice");
-            String skuStock = (String) request.getAttribute("skuStock");
-            String skuPic = (String) request.getAttribute("skuPic");
+            String skuName = request.getParameter("skuName");
+            String skuBrand = request.getParameter("skuBrand");
+            String skuRam = request.getParameter("skuRam");
+            String skuRom = request.getParameter("skuRom");
+            String screenSize = request.getParameter("screenSize");
+            String phonePrice = request.getParameter("phonePrice");
+            String skuStock = request.getParameter("skuStock");
+            String skuPic = request.getParameter("skuPic");
             Phone phone = prepareSku(skuName,skuBrand,skuRam,skuRom,screenSize,phonePrice,skuStock,skuPic,user.getUserName());
             log.error("录入手机信息: " + JsonUtils.toString(phone));
             skuService.insertSku(phone);
