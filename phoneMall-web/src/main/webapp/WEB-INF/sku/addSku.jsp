@@ -98,12 +98,12 @@
                     <label class="control-label">运行内存</label>
                     <div class="controls">
                         <select name="skuRam" class="input-xlarge">
-                            <option>2G以下</option>
-                            <option>2G</option>
-                            <option>3G</option>
-                            <option>4G</option>
-                            <option>6G</option>
-                            <option>8G</option></select>
+                            <option value="1">2G以下</option>
+                            <option value="2">2G</option>
+                            <option value="3">3G</option>
+                            <option value="4">4G</option>
+                            <option value="5">6G</option>
+                            <option value="6">8G</option></select>
                     </div>
 
                 </div><div class="control-group">
@@ -112,13 +112,13 @@
                 <label class="control-label">机身内存</label>
                 <div class="controls">
                     <select name="skuRom" class="input-xlarge">
-                        <option>8G以下</option>
-                        <option>8G</option>
-                        <option>16G</option>
-                        <option>32G</option>
-                        <option>64G</option>
-                        <option>128G</option>
-                        <option>256G</option></select>
+                        <option value="1">8G以下</option>
+                        <option value="2">8G</option>
+                        <option value="3">16G</option>
+                        <option value="4">32G</option>
+                        <option value="5">64G</option>
+                        <option value="6">128G</option>
+                        <option value="7">256G</option></select>
                 </div>
 
             </div><div class="control-group">
@@ -127,11 +127,11 @@
                 <label class="control-label">屏幕尺寸</label>
                 <div class="controls">
                     <select class="input-xlarge" name="screenSize">
-                        <option>5.5-5.1英寸</option>
-                        <option>5.6英寸及以上</option>
-                        <option>5.0-4.6英寸</option>
-                        <option>3.0英寸及以下</option>
-                        <option>4.5-3.1英寸</option>
+                        <option value="1">5.5-5.1英寸</option>
+                        <option value="2">5.6英寸及以上</option>
+                        <option value="3">5.0-4.6英寸</option>
+                        <option value="4">3.0英寸及以下</option>
+                        <option value="5">4.5-3.1英寸</option>
                     </select>
                 </div>
 
