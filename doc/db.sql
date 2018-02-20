@@ -1,13 +1,16 @@
 CREATE TABLE `pm_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增主键，用户id',
   `user_name` varchar(50) DEFAULT NULL,
-  `user_paswd` varchar(255) DEFAULT NULL,
+  `user_mail` varchar(50) DEFAULT NULL,
+  `user_tel` varchar(20) DEFAULT NULL,
+  `user_passwd` varchar(255) DEFAULT NULL,
+  `user_addr` varchar(255) DEFAULT NULL,
   `user_type` enum('admin','common') DEFAULT 'common' COMMENT '用户类型,普通用户 or 管理员',
   `status` tinyint(4) DEFAULT NULL,
   `create_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建日期',
   PRIMARY KEY (`id`),
   KEY `idx_username` (`user_name`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 
 CREATE TABLE `pm_phone_detail` (

@@ -25,7 +25,7 @@ public class UserInfoController {
             User user = (User) session.getAttribute("user");
             log.error("用户个人信息: " + user.getUserType());
             model.addAttribute(user);
-            return "html/userInfo";
+            return "user/userInfo";
         } catch (Exception e) {
             log.error("访问个人信息出错",e);
             return "error";
@@ -39,7 +39,7 @@ public class UserInfoController {
                 return "error";
             }
             model.addAttribute(user);
-            return "html/adminOps";
+            return "user/adminOps";
         } catch (Exception e) {
             log.error("管理员页面访问出错",e);
             return "error";
