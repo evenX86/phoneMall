@@ -14,6 +14,8 @@
     <!-- Custom styles for this template -->
     <link href="../../bootstrap-3.3.7-dist/css/signin.css" rel="stylesheet">
     <link href="../../bootstrap-3.3.7-dist/css/offcanvas.css" rel="stylesheet">
+    <link href="../../bootstrap-3.3.7-dist/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -41,22 +43,46 @@
 
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right">
-        <table>
+        <table id="skuTable" class="display" cellspacing="0" width="100%">
+            <thead>
             <tr>
-                <th>手机名称</th>
-                <th>手机品牌</th>
-                <th>手机价格</th>
+                <th>商品编号</th>
+                <th>商品名称</th>
+                <th>品牌</th>
+                <th>定价</th>
+                <th>库存</th>
+                <th>规格参数</th>
+                <th>录入人</th>
+                <th>录入时间</th>
+                <th>修改人</th>
+                <th>修改时间</th>
+                <th>操作</th>
             </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${phoneList}" var="phone">
+                <tr>
+                    <td>${phone.id}</td>
+                    <td>${phone.phoneName}</td>
+                    <td>${phone.phoneBrand}</td>
+                    <td>${phone.phonePrice}</td>
+                    <td>${phone.phoneStock}</td>
+                    <td>${phone.phoneConfig}</td>
+                    <td>${phone.creator}</td>
+                    <td>${phone.created}</td>
+                    <td>${phone.operator}</td>
+                    <td>${phone.modified}</td>
+                    <td class="success"><a href="/updateSku?skuId=${phone.id}">修改</a></td>
+                </tr>
+            </c:forEach>
+            </tbody>
         </table>
-        <c:forEach items="${phoneList}" var="phone">
-            <tr>
-                <td>${phone.phoneName}</td>
-                <td>${phone.phoneBrand}</td>
-                <td>${phone.phonePrice}</td>
-            </tr>
-
-        </c:forEach>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#skuTable').DataTable();
+    });
+</script>
 </body>
 </html>

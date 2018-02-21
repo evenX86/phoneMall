@@ -9,6 +9,7 @@
         )
     </insert>
     <resultMap id="phoneResultMap" type="edu.zisu.phoneMall.sku.Phone">
+        <id column="id" property="id" jdbcType="INTEGER" />
         <id column="phone_name" property="phoneName" jdbcType="VARCHAR" />
         <id column="phone_brand" property="phoneBrand" jdbcType="VARCHAR"/>
         <id column="phone_price" property="phonePrice" jdbcType="INTEGER"/>
@@ -21,7 +22,7 @@
         <id column="status" property="status" jdbcType="TINYINT"/>
     </resultMap>
     <select id="querySkuList" resultMap="phoneResultMap">
-        SELECT `phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
+        SELECT `id`,`phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
         `operator`,`modified`,`status` FROM pm_phone_detail
     </select>
 </mapper>

@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 public class Phone {
+    private Long id;
     private String phoneName;
     private String phoneBrand;
     private Integer phonePrice;
@@ -28,8 +29,9 @@ public class Phone {
         this.operator = operator;
     }
 
-    public Phone(String phoneName, String phoneBrand, Integer phonePrice, Integer phoneStock, String phonePic,
+    public Phone(Long id, String phoneName, String phoneBrand, Integer phonePrice, Integer phoneStock, String phonePic,
                  String phoneConfig, String creator, Timestamp created, String operator, Timestamp modified, Integer status) {
+        this.id = id;
         this.phoneName = phoneName;
         this.phoneBrand = phoneBrand;
         this.phonePrice = phonePrice;
@@ -41,6 +43,14 @@ public class Phone {
         this.operator = operator;
         this.modified = Date.valueOf(modified.toLocalDateTime().toLocalDate());
         this.status = status;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPhoneName() {
