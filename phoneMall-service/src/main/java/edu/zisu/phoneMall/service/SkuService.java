@@ -9,4 +9,7 @@ public interface SkuService {
 
     public List<Phone> querySkuList();
 
+    Phone querySku(Long skuId);
+
+    void updateSku(Phone phone);
 }

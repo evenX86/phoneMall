@@ -25,4 +25,14 @@
         SELECT `id`,`phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
         `operator`,`modified`,`status` FROM pm_phone_detail
     </select>
+    <select id="querySkuBySkuId" resultMap="phoneResultMap" parameterType="java.lang.Long">
+        SELECT `id`,`phone_name`,`phone_brand`,`phone_price`,`phone_stock`,`phone_img`,`phone_config`,`creator`,`created`,
+        `operator`,`modified`,`status` FROM pm_phone_detail where id=#{skuId}
+    </select>
+    <update id="update" parameterType="edu.zisu.phoneMall.sku.Phone">
+        update pm_phone_detail
+        SET phone_name=#{phoneName},phone_brand=#{phoneBrand},phone_config=#{phoneConfig},phone_price=#{phonePrice},
+        phone_stock=#{phoneStock},phone_img=#{phonePic},modified=sysdate(),operator=#{operator}
+        WHERE id=#{id}
+    </update>
 </mapper>

@@ -9,4 +9,8 @@ public interface SkuMapper {
     int insert(Phone record);
 
     List<Phone> querySkuList();
+
+    Phone querySkuBySkuId(Long skuId);
+
+    int update(Phone phone);
 }

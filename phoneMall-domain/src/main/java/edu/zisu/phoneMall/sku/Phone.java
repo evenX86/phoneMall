@@ -17,8 +17,9 @@ public class Phone {
     private Date modified;
     private Integer status;
 
-    public Phone(String phoneName, String phoneBrand, Integer phonePrice, Integer phoneStock, String phonePic,
+    public Phone(Long skuId,String phoneName, String phoneBrand, Integer phonePrice, Integer phoneStock, String phonePic,
                  String phoneConfig,String creator, String operator) {
+        this.id = skuId;
         this.phoneName = phoneName;
         this.phoneBrand = phoneBrand;
         this.phonePrice = phonePrice;

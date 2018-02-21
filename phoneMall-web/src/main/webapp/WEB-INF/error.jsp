@@ -39,7 +39,8 @@
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
             <div class="jumbotron">
-                <h1>Ops Something is wrong</h1>
+                <h3>Ops Something is wrong</h3>
+                <h5>${errMsg}</h5>
             </div>
         </div><!--/.col-xs-12.col-sm-9-->
     </div><!--/row-->

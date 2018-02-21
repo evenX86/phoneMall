@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class SkuServiceImpl implements SkuService{
@@ -31,5 +30,16 @@ public class SkuServiceImpl implements SkuService{
         List<Phone> tmpResult = skuMapper.querySkuList();
         log.error("查询结果: " + JsonUtils.toString(tmpResult));
         return tmpResult;
+    }
+
+    @Override
+    public Phone querySku(Long skuId) {
+        return skuMapper.querySkuBySkuId(skuId);
+    }
+
+    @Override
+    public void updateSku(Phone phone) {
+        int i = skuMapper.update(phone);
+        log.error("更新数据库返回值: " + i);
     }
 }
