@@ -84,7 +84,7 @@ public class SkuController {
                     Integer.parseInt(skuStock),skuPic,user.getUserName());
             log.error("录入手机信息: " + JsonUtils.toString(phone));
             skuService.insertSku(phone);
-            return "sku/skuList";
+            return skuList(request,model,session);
         } catch (Exception e) {
             log.error("访问手机列表出错",e);
             return "error";
